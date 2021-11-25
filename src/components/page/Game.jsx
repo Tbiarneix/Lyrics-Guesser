@@ -11,15 +11,18 @@ const Game = () => {
     const [ track, setTrack ] = useState(null);
     const [ lyrics, setLyrics ] = useState([]);
     const [ index, setIndex ] = useState(null);
-    const saveIndex = [];
   
+    const [ trackName, setTrackName ] = useState(null);
+    const [ trackID, setTrackID ] = useState(null);
+    const [ artistName, setArtistName ] = useState(null);
+
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
   
     useEffect(() => {
       setIndex(Math.floor(Math.random() * (31 - 0) + 0));
-      saveIndex.push(index);
     }, []);
+
 
     useEffect(() => {
       axios
@@ -32,11 +35,14 @@ const Game = () => {
   
     useEffect(() => {
       if (tracks.length) {
-        console.log(index);
+        setTrackName(tracks[index].track.track_name);
+        setTrackID(tracks[index].track.track_id);
+        setArtistName(tracks[index].track.artist_name);
+
         setTrack({
-          title: tracks[index].track.track_name,
-          id: tracks[index].track.track_id,
-          artist: tracks[index].track.artist_name
+          title: trackName,
+          id: trackID,
+          artist: artistName
         });
       }
     }, [tracks]);
