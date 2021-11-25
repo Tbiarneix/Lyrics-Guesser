@@ -5,13 +5,16 @@ import Result from './components/page/Result';
 
 
 import './App.css';
+import Header from './components/Header';
 
 function App() {
 
   return (
     <div className="App">
       <header className="App-header">
-        <Home />
+        <Header/>
+       {/* <Home /> */}
+        <Game />
   
     
 

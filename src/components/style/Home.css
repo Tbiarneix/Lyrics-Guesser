@@ -1,11 +1,30 @@
 body {
-    background-color: #7F00E0;
+    background: linear-gradient(70deg,#7F00E0, #5900B2) ;
     color: #fff;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Patua One', cursive;
+    src: url();
+}
+
+@font-face {
+    font-family: 'Acme', sans-serif;
+    src: url();
 }
 
 .container {
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
+    border: 1px solid #51EDB4 ;
+    border-radius: 30px;
+    font-family: 'Baloo 2', cursive;
+    margin-top: 2em;
+}
+.container p{
+    line-height: 2em;
+    font-size: 1.3em;
 }
 
 .violet {
@@ -22,5 +41,36 @@ body {
 
 .title1 {
     text-align: center;
+    margin-top: 2em;
+    font-family: 'Patua One', cursive;
 
+}
+
+.play {
+    
+    border-radius: 30px;
+    background-color: inherit;
+    padding: 20px;
+    
+    width: 300px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: #51EDB4;
+    color: #7F00E0;
+}
+
+.play:hover {
+    background-color: #7F00E0;
+    border: 1px solid #51EDB4 ;
+    color: #51EDB4;
+
+}
+
+.image {
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
