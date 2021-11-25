@@ -17,7 +17,6 @@ const Game = ({ generateTrack, song }) => {
     // const [artistName, setArtistName] = useState(null);
 
     const rs = global.responsiveVoice;
-    // const song = "To the left, to the left";
 
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
@@ -67,20 +66,29 @@ const Game = ({ generateTrack, song }) => {
     return (
         <div className="container">
             <h1>Chanson n°{numberTrackPlay}</h1>
-            <div className="flex">{isStart ? <Timer /> : <h4>30 secondes</h4>}
-                <button className="play-game" type="button" onClick={() => {
-                    rs.speak(song.lyric, "UK English Male", { rate: 0.9 })
-                    setIsStart(true)
-                }}>Play</button>
-            </div>
+            <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chanson<br/>
+            Appuyez sur play pour lancer la chanson à chaque tour</p>
+            <span className="timer">{isStart ? <Timer /> : <h4>30 s</h4>}</span>
             <div className="flex">
-                <img src="/assets/music.png" alt="musique" width="300" />
-                <div >
-                    <p>Artiste</p>
-                    <input className="play" value=""></input>
-                    <p>Titre</p>
-                    <input className="play" value=""></input>
-                </div>
+            <button className="play-game" type="button" onClick={()=>{
+                rs.speak(song.lyric, "UK English Male", {rate: 0.9})
+                setIsStart(true)
+            }}>Play</button>
+
+            </div>
+            <hr className="ligne"></hr>
+            <div className="flex">
+                
+            <img className="gif" src="/assets/voice-wave.gif" alt="musique" width="400"/>
+            <div >
+                <p>Artiste</p>
+           <input className="input" value=""></input>
+           <p>Titre</p>
+           <input className="input" value=""></input>
+           </div>
+          
+            </div>
+           
 
             </div>
             <div>
