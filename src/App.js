@@ -1,6 +1,6 @@
 import TestVocal from './components/TestVocal';
 import Home from './components/page/Home';
-
+import Game from './components/page/Game';
 import Result from './components/page/Result';
 import Footer from './components/Footer';
 
@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         <Header />
      
-        <Result />
+       <Game />
       </header>
     </div>
   );

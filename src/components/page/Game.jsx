@@ -10,6 +10,7 @@ const Game = () => {
     const [ track, setTrack ] = useState(null);
     const [ lyrics, setLyrics ] = useState([]);
     const [ index, setIndex ] = useState(null);
+    const rs = global.responsiveVoice;
   
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
@@ -54,17 +55,30 @@ const Game = () => {
         <div className="container">
 
             <h1>Chanson n°{numberTrackPlay}</h1>
-            {isStart ? <Timer /> : <h4>30 secondes</h4>}
+            <div className="flex">{isStart ? <Timer /> : <h4>30 secondes</h4>}
+            <button className="play-game" type="button" onClick={()=>{
+                rs.speak(lyrics, "UK English Male", {rate: 0.9})
+                setIsStart(true)
+            }}>Play</button>
+            </div>
+            <div className="flex">
             <img src="/assets/music.png" alt="musique" width="300"/>
+            <div >
+                <p>Artiste</p>
+           <input className="play" value=""></input>
+           <p>Titre</p>
+           <input className="play" value=""></input>
+           </div>
+          
+            </div>
+            
 
-            <div className="button-input">
-            <button type="button" onClick={()=>{
-                // setTimeout(setNumberTrackPlay(numberTrackPlay+1) , 5000);
-                setIsStart(true)}} >Play</button>
-            {numberTrackPlay<10?<button type="button" onClick={()=>{
+            
+            <div>
+            {numberTrackPlay<10?<button className="send" type="button" onClick={()=>{
                 setNumberTrackPlay(numberTrackPlay+1);
                 setIsStart(false);
-            }} >Morceau suivant</button>
+            }} >Envoyer</button>
             :<button type="button">Résultats</button>}
             </div>
         </div>
