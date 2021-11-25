@@ -1,4 +1,5 @@
 // import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../style/Result.css';
 import '../style/Home.css';
 
@@ -26,6 +27,7 @@ const Result = ({ score }) => {
             {/* bouton = link to 'Game.jsx' */}
             <button className="play" type="button">Rejouer</button>
             </div>
+            <NavLink exact to='/game'><button type="button">Rejouer</button></NavLink>
         </div>
     );
 }
