@@ -64,13 +64,15 @@ const Game = () => {
                 setIsStart(true)
             }}>Play</button>
             </div>
+            <hr className="ligne"></hr>
             <div className="flex">
-            <img src="/assets/voice-wave.gif" alt="musique" width="400"/>
+                
+            <img className="gif" src="/assets/voice-wave.gif" alt="musique" width="400"/>
             <div >
                 <p>Artiste</p>
-           <input className="play" value=""></input>
+           <input className="input" value=""></input>
            <p>Titre</p>
-           <input className="play" value=""></input>
+           <input className="input" value=""></input>
            </div>
           
             </div>
