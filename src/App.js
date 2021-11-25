@@ -11,7 +11,6 @@ import './App.css';
 import Header from './components/Header';
 
 function App() {
-  const [totalScore, setTotalScore] = useState(0)
 
   return (
     <div className="App">

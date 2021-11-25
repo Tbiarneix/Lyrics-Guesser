@@ -7,6 +7,7 @@ import Timer from "../Timer";
 import scoreCounting from "../scoreCounting";
 
 const Game = () => {
+  const [totalScore, setTotalScore] = useState(0);
   const [tracks, setTracks] = useState([]);
   const [track, setTrack] = useState(null);
   const [lyrics, setLyrics] = useState([]);
@@ -109,7 +110,12 @@ const Game = () => {
             onClick={() => {
               setNumberTrackPlay(numberTrackPlay + 1);
               setIsStart(false);
-              scoreCounting();
+              scoreCounting(trackName,
+                artistName,
+                artistAnswerValue,
+                songAnswerValue,
+                setTotalScore
+                );
             }}
           >
             Envoyer
@@ -120,6 +126,7 @@ const Game = () => {
           </NavLink>
         )}
       </div>
+      <div> Total score : {totalScore}</div>
     </div>
   );
 };
