@@ -18,10 +18,9 @@ const Game = () => {
       setIndex(Math.floor(Math.random() * (31 - 0) + 0));
     }, []);
 
-  
     useEffect(() => {
       axios
-        .get('https://magical-it-works.jsrover.wilders.dev/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=128b7ceff7bed320824b72e696827c98&chart_name=top&page=1&page_size=30&country=fr&f_has_lyrics=1')
+        .get('https://magical-it-works.jsrover.wilders.dev/https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=128b7ceff7bed320824b72e696827c98&chart_name=top&page=1&page_size=30&country=fr&f_has_lyrics=1')
         .then((res) => res.data)
         .then((data) => data.message.body.track_list)
         .then((tracklist) => setTracks(tracklist))
