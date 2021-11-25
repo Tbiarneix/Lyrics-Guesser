@@ -5,13 +5,13 @@ const Result = ({ score }) => {
     // const [congratulation, setCongratulation] = useState("");
     let congratulation = "";
 
-    if (score == 10) {
+    if (score === 100) {
         congratulation = "Parfait ! Tu es beaucoup trop chaud !"   
-    } else if (score > 6) {
+    } else if (score > 59) {
         congratulation = "Tu es balèze de ouf ! Bravo !"     
-    } else if (score > 4) {
+    } else if (score > 39) {
         congratulation = "Plutôt pas mal ! Bien joué !"    
-    } else if (score > 2) {
+    } else if (score > 19) {
         congratulation = "C'est pas terrible... Tu feras mieux la prochaine fois !"  
     } else {
         congratulation = "Nul ! Nul ! Nul ! Tu es obligé de rejouer pour laver cet échec !"     
@@ -19,7 +19,7 @@ const Result = ({ score }) => {
 
     return (
         <div>
-            <h1>Vous avez répondu correctement à {score}/10 questions !</h1>
+            <h1>Votre score est de {score} !</h1>
             <h2>{congratulation}</h2>
             {/* bouton = link to 'Game.jsx' */}
             <button type="button">Rejouer</button>
