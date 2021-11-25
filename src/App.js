@@ -1,9 +1,11 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
+import TestVocal from './components/TestVocal';
 import Home from './components/page/Home';
 import Game from './components/page/Game';
 import Result from './components/page/Result';
+
+
 import './App.css';
+import Header from './components/Header';
 
 function App() {
 
@@ -11,10 +13,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header/>
-        <Home/>
-        <Game/>
-        <Result score={5} />
-        <Footer/>
+       {/* <Home /> */}
+        <Game />
+  
+    
+
       </header>
     </div>
   );
