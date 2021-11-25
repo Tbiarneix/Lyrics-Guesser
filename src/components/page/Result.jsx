@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import '../style/Result.css';
+import '../style/Home.css';
 
 const Result = ({ score }) => {
     // const [congratulation, setCongratulation] = useState("");
@@ -19,10 +20,12 @@ const Result = ({ score }) => {
 
     return (
         <div>
+            <div className="container">
             <h1>Votre score est de {score} !</h1>
             <h2>{congratulation}</h2>
             {/* bouton = link to 'Game.jsx' */}
-            <button type="button">Rejouer</button>
+            <button className="play" type="button">Rejouer</button>
+            </div>
         </div>
     );
 }
