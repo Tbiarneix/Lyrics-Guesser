@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import TestVocal from './components/TestVocal';
 import Home from './components/page/Home';
 import Game from './components/page/Game';
@@ -10,8 +11,7 @@ import './App.css';
 import Header from './components/Header';
 
 function App() {
-
-
+  const [totalScore, setTotalScore] = useState(0)
 
   return (
     <div className="App">
@@ -23,8 +23,6 @@ function App() {
           <Route path='/result' element={<Result />} />
         </Routes>
       <Footer />
-        {/* <Game />
-        <Result /> */}
       </header>
     </div>
   );
