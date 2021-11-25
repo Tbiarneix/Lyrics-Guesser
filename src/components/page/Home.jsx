@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import "../style/Home.css";
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
 
       {/* bouton = link to 'Game.jsx' */}
       <h2>Prêt à jouer ?</h2>
-      <button className="play" type="button">Jouer</button>
+      <NavLink exact to='/game'><button className="play" type="button">Jouer</button></ NavLink>
       
    
        
