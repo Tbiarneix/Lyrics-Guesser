@@ -1,0 +1,26 @@
+body {
+    background-color: #7F00E0;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.violet {
+    color : #7F00E0
+}
+
+.orange {
+    color: #FF890A;
+}
+
+.green {
+    color: #51EDB4;
+}
+
+.title1 {
+    text-align: center;
+
+}
