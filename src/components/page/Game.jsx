@@ -11,6 +11,7 @@ const Game = () => {
     const [ lyrics, setLyrics ] = useState([]);
     const [ index, setIndex ] = useState(null);
     const rs = global.responsiveVoice;
+    const song = "To the left, to the left. Everything you own in the box to the left";
   
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
@@ -55,14 +56,17 @@ const Game = () => {
         <div className="container">
 
             <h1>Chanson n°{numberTrackPlay}</h1>
-            <div className="flex">{isStart ? <Timer /> : <h4>30 secondes</h4>}
+            <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chanson<br/>
+            Appuyez sur play pour lancer la chanson à chaque tour</p>
+            <span className="timer">{isStart ? <Timer /> : <h4>30 s</h4>}</span>
+            <div className="flex">
             <button className="play-game" type="button" onClick={()=>{
-                rs.speak(lyrics, "UK English Male", {rate: 0.9})
+                rs.speak(song, "UK English Male", {rate: 0.9})
                 setIsStart(true)
             }}>Play</button>
             </div>
             <div className="flex">
-            <img src="/assets/music.png" alt="musique" width="300"/>
+            <img src="/assets/voice-wave.gif" alt="musique" width="400"/>
             <div >
                 <p>Artiste</p>
            <input className="play" value=""></input>
