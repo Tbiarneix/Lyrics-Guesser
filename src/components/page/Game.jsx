@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import '../style/Game.css';
 import '../style/Home.css';
@@ -10,12 +11,14 @@ const Game = () => {
     const [ track, setTrack ] = useState(null);
     const [ lyrics, setLyrics ] = useState([]);
     const [ index, setIndex ] = useState(null);
+    const saveIndex = [];
   
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
   
     useEffect(() => {
       setIndex(Math.floor(Math.random() * (31 - 0) + 0));
+      saveIndex.push(index);
     }, []);
 
     useEffect(() => {
@@ -48,8 +51,6 @@ const Game = () => {
     }
     , [track])
   
-    console.log(lyrics);
-
     return (
         <div className="container">
 
@@ -65,7 +66,7 @@ const Game = () => {
                 setNumberTrackPlay(numberTrackPlay+1);
                 setIsStart(false);
             }} >Morceau suivant</button>
-            :<button type="button">Résultats</button>}
+            :<NavLink exact to='/result'><button type="button">Résultats</button></NavLink>}
             </div>
         </div>
     );
