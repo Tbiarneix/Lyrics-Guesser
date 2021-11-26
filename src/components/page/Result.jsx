@@ -22,9 +22,10 @@ const Result = ({ totalScore }) => {
     return (
         <div>
             <div className="container">
-            <h1>Votre score est de {totalScore} !</h1>
+            <img src="/assets/logo-transparent.png" alt="logo" width="200" className="logo"/>
+            <h1>Votre score est de 8 !</h1>
             <h2>{congratulation}</h2>
-            <NavLink exact to='/game'><button className="play" type="button" >Rejouer</button></NavLink>
+            <NavLink exact to='/'><button className="play" type="button" >Rejouer</button></NavLink>
             </div>
         </div>
     );
