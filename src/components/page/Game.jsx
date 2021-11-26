@@ -77,6 +77,13 @@ const Game = ({ generateTrack, song, index }) => {
                 setIsStart(true)
             }}>Play</button>
 
+
+      <button className="play-game" onClick={() => rs.cancel(song.lyric)} type="button" value="Stop">
+        Stop
+      </button>
+
+
+
             </div>
            
             <div className="flex">
@@ -117,25 +124,7 @@ const Game = ({ generateTrack, song, index }) => {
                 }
             </div>
         </div>
-        <div>
-        {numberTrackPlay < 10 ? (
-          <button
-            className="send"
-            type="button"
-            onClick={() => {
-              setNumberTrackPlay(numberTrackPlay + 1);
-              setIsStart(false);
-              generateTrack();
-            }}
-          >
-            Envoyer
-          </button>
-        ) : (
-          <NavLink exact to="/result">
-            <button type="button" className="send">Résultats</button>
-          </NavLink>
-        )}
-      </div>
+   
       <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
     </div>
   );
