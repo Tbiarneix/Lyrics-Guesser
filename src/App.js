@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState, useRef } from 'react';
-import TestVocal from './components/TestVocal';
+import { useEffect, useState } from 'react';
 
 import Home from './components/page/Home';
 import Game from './components/page/Game';
@@ -17,12 +16,12 @@ function App() {
   const [artist, setArtist] = useState(null);
   const [track, setTrack] = useState(null);
   const [lyric, setLyric] = useState(null);
-
-  const [totalScore, setTotalScore] = useState(0);
   const [song, setSong] = useState({});
 
-
   const tracks = Tracks;
+  
+  const [totalScore, setTotalScore] = useState(0);
+
 
   // useEffect(() => {
   //   index.current = index.current + 1
@@ -31,8 +30,8 @@ function App() {
 
   const generateTrack = () => {
 
-    setIndex(index);
-
+    // setIndex(Math.floor(Math.random() * (10 - 0) + 0));
+    setIndex(Math.floor(Math.random() * (3 - 0) + 0));
     console.log(index);
     setArtist(tracks[index].singer);
     setTrack(tracks[index].track);
