@@ -47,7 +47,7 @@ const ScoreCounting = ({ artistName, trackName, artistAnswerValue, songAnswerVal
   songRoundScore = 0;
   return (
     <div>
-      <p>Total Score : {totalScore}</p>
+      <p>Round Score : {totalScore}</p>
     </div>
   );
 };
