@@ -1,0 +1,15 @@
+.timer {
+    border-radius: 40px;
+    background-color: #51EDB4;
+    color: #7F00E0;
+    display: block;
+    width: 111px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    font-size: 38px;
+    padding: 10px;
+}
+
+h4 {
+    margin: 0;
+}

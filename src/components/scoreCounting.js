@@ -1,13 +1,7 @@
-const scoreCounting = (
-  trackName,
-  artistName,
-  artistAnswerValue,
-  songAnswerValue,
-  {setTotalScore}
-) => {
+const ScoreCounting = ({ artistName, trackName, artistAnswerValue, songAnswerValue}) => {
   //Importe la valeur de l'API
-    const artist = trackName;
-    const song = artistName ;
+    const artist = artistName;
+    const song = trackName ;
     const artistLower = artist.toLowerCase();
     const songLower = song.toLowerCase();
   // Récupère l'input de l'utilisateur
@@ -15,6 +9,7 @@ const scoreCounting = (
     const songAnswer = songAnswerValue;
     const artistAnswerLower = artistAnswer.toLowerCase();
     const songAnswerLower = songAnswer.toLowerCase();
+    let totalScore = 0;
   //Score du tour
     let roundScore = 0;
   // Score du tour pour comparer la validité de la réponse
@@ -42,11 +37,15 @@ const scoreCounting = (
     } else if (songRoundScore >= song.length * 0.8) {
       roundScore += 3;
   };
-  setTotalScore(roundScore);
+  totalScore += roundScore;
   roundScore = 0;
   artistRoundScore = 0;
   songRoundScore = 0;
-
+  return (
+    <div>
+      <p>Round Score : {totalScore}</p>
+    </div>
+  );
 };
 
-export default scoreCounting;
+export default ScoreCounting;

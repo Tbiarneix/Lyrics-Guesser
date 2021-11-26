@@ -4,17 +4,19 @@ import axios from "axios";
 import "../style/Game.css";
 import "../style/Home.css";
 import Timer from "../Timer";
-import scoreCounting from "../scoreCounting";
+import ScoreCounting from "../scoreCounting";
 
 const Game = () => {
-  const [totalScore, setTotalScore] = useState(0);
   const [tracks, setTracks] = useState([]);
   const [track, setTrack] = useState(null);
   const [lyrics, setLyrics] = useState([]);
   const [index, setIndex] = useState(null);
-  const [trackName, setTrackName] = useState(null);
+  // const [trackName, setTrackName] = useState(null);
   const [trackID, setTrackID] = useState(null);
-  const [artistName, setArtistName] = useState(null);
+  // const [artistName, setArtistName] = useState(null);
+  const artistName = "Beyonce";
+  const trackName = "To the left";
+  const song = "To the left, to the left. Everything you own in the box to the left";
   const rs = global.responsiveVoice;
   const saveIndex = [];
   const [numberTrackPlay, setNumberTrackPlay] = useState(1);
@@ -66,13 +68,15 @@ const Game = () => {
   return (
     <div className="container">
       <h1>Chanson n°{numberTrackPlay}</h1>
+      <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chanson<br/>
+            Appuyez sur play pour lancer la chanson à chaque tour</p>
       <div className="flex">
         {isStart ? <Timer /> : <h4>30 secondes</h4>}
         <button
           className="play-game"
           type="button"
           onClick={() => {
-            rs.speak(lyrics, "UK English Male", { rate: 0.9 });
+            rs.speak(song, "UK English Male", { rate: 0.9 });
             setIsStart(true);
           }}
         >
@@ -80,14 +84,14 @@ const Game = () => {
         </button>
       </div>
       <div className="flex">
-        <img src="/assets/music.png" alt="musique" width="300" />
+      <img src="/assets/voice-wave.gif" alt="musique" width="400"/>
         <div>
           <p>Artiste</p>
           <input
             className="play"
             value={artistAnswerValue}
             type="text"
-            placeholder="Artist answer here..."
+            placeholder="L'artiste ici.."
             onChange={handleArtistAnswer}>
 
           </input>
@@ -96,7 +100,7 @@ const Game = () => {
             className="play"
             value={songAnswerValue}
             type="text"
-            placeholder="Song answer here..."
+            placeholder="La chanson ici..."
             onChange={handleSongAnswer}>
 
           </input>
@@ -110,12 +114,6 @@ const Game = () => {
             onClick={() => {
               setNumberTrackPlay(numberTrackPlay + 1);
               setIsStart(false);
-              scoreCounting(trackName,
-                artistName,
-                artistAnswerValue,
-                songAnswerValue,
-                setTotalScore
-                );
             }}
           >
             Envoyer
@@ -126,7 +124,7 @@ const Game = () => {
           </NavLink>
         )}
       </div>
-      <div> Total score : {totalScore}</div>
+      <ScoreCounting trackName={trackName} artistName={artistName} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
     </div>
   );
 };
