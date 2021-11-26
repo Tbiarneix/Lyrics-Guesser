@@ -3,7 +3,8 @@ const Tracks = [
         singer: 'Beyoncé',
         track: 'Irreplaceable',
         lyric: "To the left, to the left, everything you own in the bow to the left, in the closet, that's my stuff, yes, if I bought it, please don't touch, and keep talking that mess that's fine, But could you walk and talk at the same time? And, it's my name that's on that Jag, So remove your bags, let me call you a cab, Standing in the front you're telling me how I'm such a fool, talking 'bout how I'll never find a man like you, you got me twisted"
-    },    {
+    },    
+    {
         singer: 'Ed Sheeran',
         track: 'Shape of you',
         lyric: "The club isn't the best place to find a lover, So the bar is where I go (mmmm), Me and my friends at the table doing shots, Drinking fast and then we talk slow (mmmm), And you come over and start up a conversation with just me, And trust me I'll give it a chance now (mmmm)Take my hand, stop, put Van The Man on the jukebox, And then we start to dance, And now I'm singing like, Girl, you know I want your love, Your love was handmade for somebody like me, Come on now, follow my lead"

@@ -30,7 +30,7 @@ function App() {
 
   const generateTrack = () => {
     // setIndex(Math.floor(Math.random() * (10 - 0) + 0));
-    setIndex(Math.floor(Math.random() * (3 - 0) + 0));
+    setIndex(Math.floor(Math.random() * (11 - 0) + 0));
     console.log(index);
     setArtist(tracks[index].singer);
     setTrack(tracks[index].track);
