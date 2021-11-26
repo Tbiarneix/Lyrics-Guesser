@@ -17,10 +17,12 @@ function App() {
   const [artist, setArtist] = useState(null);
   const [track, setTrack] = useState(null);
   const [lyric, setLyric] = useState(null);
-  const [song, setSong] = useState(null);
-  // const [savedIndex, setSavedIndex ] = useState([]);
+
+  const [totalScore, setTotalScore] = useState(0);
+
 
   const tracks = Tracks;
+
 
   const generateTrack = () => {
 
@@ -31,6 +33,10 @@ function App() {
     setArtist(tracks[index].singer);
     setTrack(tracks[index].track);
     setLyric(tracks[index].lyric);
+  }
+
+  const handleTotalScore = (roundScore) => {
+    setTotalScore(roundScore)
   }
 
   useEffect(() => {
@@ -48,9 +54,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Routes>
-          <Route exact path='/' element={<Home generateTrack={generateTrack} song={song} index={index} />} />
-          <Route path='/game' element={<Game generateTrack={generateTrack} song={song} index={index} />} />
-          <Route path='/result' element={<Result />} />
+          <Route exact path='/' element={<Home generateTrack={generateTrack} song={song} index={index}/>} />
+          <Route path='/game' element={<Game generateTrack={generateTrack} song={song} index={index} totalScore={totalScore} handleTotalScore={handleTotalScore} />} />
+          <Route path='/result' element={<Result totalScore={totalScore} />} />
         </Routes>
       </header>
     </div>

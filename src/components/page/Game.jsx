@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import "../style/Game.css";
 import "../style/Home.css";
 import Timer from "../Timer";
-import ScoreCounting from "../scoreCounting";
+import ScoreCounting from "../ScoreCounting";
 
-const Game = ({ generateTrack, song, index }) => {
+const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
     // const [tracks, setTracks] = useState([]);
     // const [track, setTrack] = useState(null);
     // const [lyrics, setLyrics] = useState([]);
@@ -134,7 +134,26 @@ const Game = ({ generateTrack, song, index }) => {
                 }
             </div>
         </div>
-      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
+        <div>
+        {numberTrackPlay < 10 ? (
+          <button
+            className="send"
+            type="button"
+            onClick={() => {
+              setNumberTrackPlay(numberTrackPlay + 1);
+              setIsStart(false);
+              generateTrack();
+            }}
+          >
+            Envoyer
+          </button>
+        ) : (
+          <NavLink exact to="/result">
+            <button type="button" className="send">Résultats</button>
+          </NavLink>
+        )}
+      </div>
+      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
     </div>
   );
 };
