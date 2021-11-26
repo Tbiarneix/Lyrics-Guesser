@@ -3,9 +3,6 @@ import "../style/Home.css";
 
 const Home = ({ generateTrack, song, index }) => {
   
-  console.log(index);
-  console.log(song);
-
   return (
     <div>
       <div className="container">
@@ -25,7 +22,7 @@ const Home = ({ generateTrack, song, index }) => {
       </div>
 
       <h2>Prêt à jouer ?</h2>
-      <NavLink exact to='/game'><button className="play" type="button" onClick={generateTrack}>Jouer</button></ NavLink>
+      <NavLink exact to='/game'><button className="send" type="button" onClick= {generateTrack}>Jouer</button></ NavLink>
       
    
        
