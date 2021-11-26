@@ -6,7 +6,7 @@ import "../style/Home.css";
 import Timer from "../Timer";
 import ScoreCounting from "../scoreCounting";
 
-const Game = ({ generateTrack, song }) => {
+const Game = ({ generateTrack, song, totalScore, handleTotalScore }) => {
     // const [tracks, setTracks] = useState([]);
     // const [track, setTrack] = useState(null);
     // const [lyrics, setLyrics] = useState([]);
@@ -16,9 +16,9 @@ const Game = ({ generateTrack, song }) => {
     // const [artistName, setArtistName] = useState(null);
     const artistName = "Beyonce";
     const trackName = "To the left";
-    const song = "To the left, to the left. Everything you own in the box to the left";
+    const songLyrics = "To the left, to the left. Everything you own in the box to the left";
     const rs = global.responsiveVoice;
-    const saveIndex = [];
+    // const saveIndex = [];
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
     const [artistAnswerValue, setArtistAnswerValue] = useState("");
@@ -78,7 +78,7 @@ const Game = ({ generateTrack, song }) => {
             className="play-game"
             type="button"
             onClick={() => {
-              rs.speak(song, "UK English Male", { rate: 0.9 });
+              rs.speak(songLyrics, "UK English Male", { rate: 0.9 });
               setIsStart(true);
             }}
           >
@@ -124,7 +124,7 @@ const Game = ({ generateTrack, song }) => {
           </NavLink>
         )}
       </div>
-      <ScoreCounting trackName={trackName} artistName={artistName} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
+      <ScoreCounting trackName={trackName} artistName={artistName} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
     </div>
   );
 };

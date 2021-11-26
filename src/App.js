@@ -17,12 +17,17 @@ function App() {
   const [track, setTrack] = useState(null);
   const [lyric, setLyric] = useState(null);
   const [song, setSong] = useState(null);
+  const [totalScore, setTotalScore] = useState(0);
 
   const generateTrack = () => {
       setIndex(index+1);
       setArtist(artists[index]);
       setTrack(tracks[index]);
       setLyric(lyrics[index]);
+  }
+
+  const handleTotalScore = (roundScore) => {
+    setTotalScore(roundScore)
   }
 
   useEffect(() => {
@@ -39,8 +44,8 @@ function App() {
       <Header />
         <Routes>
           <Route exact path='/' element={<Home generateTrack={generateTrack} />} />
-          <Route path='/game' element={<Game generateTrack={generateTrack} song={song} />} />
-          <Route path='/result' element={<Result />} />
+          <Route path='/game' element={<Game generateTrack={generateTrack} song={song} totalScore={totalScore} handleTotalScore={handleTotalScore} />} />
+          <Route path='/result' element={<Result totalScore={totalScore} />} />
         </Routes>
       <Footer />
       </header>
