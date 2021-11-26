@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 import "../style/Game.css";
 import "../style/Home.css";
 import Timer from "../Timer";
-import ScoreCounting from "../scoreCounting";
+import ScoreCounting from "../ScoreCounting";
 
-const Game = ({ generateTrack, song, totalScore, handleTotalScore }) => {
+const Game = ({ generateTrack, song, index }) => {
     // const [tracks, setTracks] = useState([]);
     // const [track, setTrack] = useState(null);
     // const [lyrics, setLyrics] = useState([]);
@@ -14,20 +13,7 @@ const Game = ({ generateTrack, song, totalScore, handleTotalScore }) => {
     // const [trackName, setTrackName] = useState(null);
     // const [trackID, setTrackID] = useState(null);
     // const [artistName, setArtistName] = useState(null);
-    const artistName = "Beyonce";
-    const trackName = "To the left";
-    const songLyrics = "To the left, to the left. Everything you own in the box to the left";
-    const rs = global.responsiveVoice;
-    // const saveIndex = [];
-    const [numberTrackPlay, setNumberTrackPlay] = useState(1);
-    const [isStart, setIsStart] = useState(false);
-    const [artistAnswerValue, setArtistAnswerValue] = useState("");
-    const handleArtistAnswer = (answer) => setArtistAnswerValue(answer.target.value);
-    const [songAnswerValue, setSongAnswerValue] = useState("");
-    const handleSongAnswer = (answer) => setSongAnswerValue(answer.target.value);
 
-    
-    console.log(song);
     // useEffect(() => {
     //     setIndex(Math.floor(Math.random() * (31 - 0) + 0));
     // }, []);
@@ -67,30 +53,39 @@ const Game = ({ generateTrack, song, totalScore, handleTotalScore }) => {
     // }
     //     , [track])
   
-  return (
-    <div className="container">
-      <h1>Chanson n°{numberTrackPlay}</h1>
-      <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chanson<br/>
-            Appuyez sur play pour lancer la chanson à chaque tour</p>
-        <div className="flex">
-          {isStart ? <Timer /> : <h4>30 secondes</h4>}
-          <button
-            className="play-game"
-            type="button"
-            onClick={() => {
-              rs.speak(songLyrics, "UK English Male", { rate: 0.9 });
-              setIsStart(true);
-            }}
-          >
-            Play
-          </button>
-        </div>
-        <div className="flex">
-        <img src="/assets/voice-wave.gif" alt="musique" width="400"/>
-          <div>
-            <p>Artiste</p>
-            <input
-              className="play"
+    const rs = global.responsiveVoice;
+
+    const [numberTrackPlay, setNumberTrackPlay] = useState(1);
+    const [isStart, setIsStart] = useState(false);
+    const [artistAnswerValue, setArtistAnswerValue] = useState("");
+    const handleArtistAnswer = (answer) => setArtistAnswerValue(answer.target.value);
+    const [songAnswerValue, setSongAnswerValue] = useState("");
+    const handleSongAnswer = (answer) => setSongAnswerValue(answer.target.value);
+
+    return (
+        <div>
+        <div className="container">
+            <h1>Chanson n°{numberTrackPlay}</h1>
+            <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chansons<br/>
+            <b>Appuyez sur play </b>pour lancer la chanson à chaque tour</p>
+            <hr className="ligne"></hr>
+            <span className="timer">{isStart ? <Timer /> : <h4>30 s</h4>}</span>
+            <div className="flex">
+            
+            <button className="play-game" type="button" onClick={()=>{
+                rs.speak(song.lyric, "UK English Male", {rate: 0.9})
+                setIsStart(true)
+            }}>Play</button>
+
+            </div>
+           
+            <div className="flex">
+                
+            <img className="gif" src="/assets/voice-wave.gif" alt="musique" width="400"/>
+            <div >
+                <p>Artiste</p>
+              <input
+              className="input"
               value={artistAnswerValue}
               type="text"
               placeholder="L'artiste ici.."
@@ -98,13 +93,29 @@ const Game = ({ generateTrack, song, totalScore, handleTotalScore }) => {
             </input>
             <p>Titre</p>
             <input
-              className="play"
+              className="input"
               value={songAnswerValue}
               type="text"
               placeholder="La chanson ici..."
               onChange={handleSongAnswer}>
             </input>
-          </div>
+           </div>
+          
+            </div>
+            <div>
+                {numberTrackPlay < 10
+                    ? <button
+                        className="send"
+                        type="button"
+                        onClick={() => {
+                            setNumberTrackPlay(numberTrackPlay + 1);
+                            setIsStart(false);
+                            generateTrack();
+                        }}
+                    > Envoyer </button>
+                    : <NavLink exact to='/result'><button className="send" type="button"> Résultats </button></NavLink>
+                }
+            </div>
         </div>
         <div>
         {numberTrackPlay < 10 ? (
@@ -114,17 +125,18 @@ const Game = ({ generateTrack, song, totalScore, handleTotalScore }) => {
             onClick={() => {
               setNumberTrackPlay(numberTrackPlay + 1);
               setIsStart(false);
+              generateTrack();
             }}
           >
             Envoyer
           </button>
         ) : (
           <NavLink exact to="/result">
-            <button type="button">Résultats</button>
+            <button type="button" className="send">Résultats</button>
           </NavLink>
         )}
       </div>
-      <ScoreCounting trackName={trackName} artistName={artistName} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
+      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
     </div>
   );
 };

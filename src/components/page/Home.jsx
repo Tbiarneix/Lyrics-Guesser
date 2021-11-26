@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import "../style/Home.css";
 
-const Home = ({ generateTrack }) => {
-    
+const Home = ({ generateTrack, song, index }) => {
+  
   return (
     <div>
       <div className="container">
@@ -21,9 +21,8 @@ const Home = ({ generateTrack }) => {
       <img src="/assets/music.png" alt="music" width="150"/>
       </div>
 
-      {/* bouton = link to 'Game.jsx' */}
       <h2>Prêt à jouer ?</h2>
-      <NavLink exact to='/game'><button className="play" type="button" onClick={generateTrack}>Jouer</button></ NavLink>
+      <NavLink exact to='/game'><button className="send" type="button" onClick= {generateTrack}>Jouer</button></ NavLink>
       
    
        
