@@ -1,15 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import TestVocal from './components/TestVocal';
 import Home from './components/page/Home';
 import Game from './components/page/Game';
 import Result from './components/page/Result';
-import Footer from './components/Footer';
 
 import Tracks from './components/data/Tracks';
 
 import './App.css';
-import Header from './components/Header';
 
 function App() {
 
@@ -19,6 +16,7 @@ function App() {
   const [lyric, setLyric] = useState(null);
 
   const [totalScore, setTotalScore] = useState(0);
+  const [song, setSong] = useState({});
 
 
   const tracks = Tracks;

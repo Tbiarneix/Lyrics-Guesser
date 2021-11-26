@@ -24,10 +24,8 @@ const Result = ({ totalScore }) => {
             <div className="container">
             <h1>Votre score est de {totalScore} !</h1>
             <h2>{congratulation}</h2>
-            {/* bouton = link to 'Game.jsx' */}
-            <button className="play" type="button">Rejouer</button>
+            <NavLink exact to='/game'><button className="play" type="button" >Rejouer</button></NavLink>
             </div>
-            <NavLink exact to='/game'><button type="button" >Rejouer</button></NavLink>
         </div>
     );
 }
