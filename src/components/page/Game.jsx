@@ -63,6 +63,8 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
     const [songAnswerValue, setSongAnswerValue] = useState("");
     const handleSongAnswer = (answer) => setSongAnswerValue(answer.target.value);
 
+    // const [emptyCase, setEmptyCase] = useState();
+
     useEffect(() => {
       if (timer === 0) {
         setNumberTrackPlay((n) => n + 1);
