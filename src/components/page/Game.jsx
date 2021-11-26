@@ -53,7 +53,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
     // }
     //     , [track])
   
-    const rs = global.responsiveVoice;
+    let rs = global.responsiveVoice;
 
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
@@ -136,7 +136,9 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                 }
             </div>
         </div>
+
       <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import "../style/Home.css";
 import Header from '../Header';
 
 const Home = ({ generateTrack, song, index }) => {
-  
+  let rs = global.responsiveVoice;
   return (
     <div>
       <Header />
@@ -24,7 +24,11 @@ const Home = ({ generateTrack, song, index }) => {
       </div>
 
       <h2>Prêt à jouer ?</h2>
-      <NavLink exact to='/game'><button className="send" type="button" onClick= {generateTrack}>Jouer</button></ NavLink>
+      <NavLink exact to='/game'><button onMouseMove={() => {
+      rs.speak(" ", "UK English Male", {volume:0},)
+        rs.enableWindowClickHook(); }} 
+        className="send" type="button" onClick ={generateTrack}
+      >Jouer</button></ NavLink>
       
    
        
