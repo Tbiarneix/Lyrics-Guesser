@@ -92,6 +92,13 @@ body {
     color: #7F00E0;
 }
 
+.send:hover {
+    background-color: #7F00E0;
+    color: #51EDB4;
+    border: 1px solid  ;
+
+}
+
 .flex {
     display: flex;
     flex-direction: row;
@@ -100,4 +107,26 @@ body {
 
 input{
     display: block;
+    
 }
+
+@media screen and (max-width: 850px) {
+    .container {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .send {
+        width: 230px;
+    }
+    .hr {
+        display: none;
+    }
+
+}
+
+
+
+

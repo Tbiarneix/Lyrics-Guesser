@@ -64,19 +64,22 @@ const Game = ({ generateTrack, song }) => {
 
 
     return (
+        <div>
         <div className="container">
             <h1>Chanson n°{numberTrackPlay}</h1>
-            <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chanson<br/>
-            Appuyez sur play pour lancer la chanson à chaque tour</p>
+            <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chansons<br/>
+            <b>Appuyez sur play </b>pour lancer la chanson à chaque tour</p>
+            <hr className="ligne"></hr>
             <span className="timer">{isStart ? <Timer /> : <h4>30 s</h4>}</span>
             <div className="flex">
+            
             <button className="play-game" type="button" onClick={()=>{
                 rs.speak(song.lyric, "UK English Male", {rate: 0.9})
                 setIsStart(true)
             }}>Play</button>
 
             </div>
-            <hr className="ligne"></hr>
+           
             <div className="flex">
                 
             <img className="gif" src="/assets/voice-wave.gif" alt="musique" width="400"/>
@@ -87,9 +90,6 @@ const Game = ({ generateTrack, song }) => {
            <input className="input" value=""></input>
            </div>
           
-            </div>
-           
-
             </div>
             <div>
                 {numberTrackPlay < 10
@@ -102,9 +102,12 @@ const Game = ({ generateTrack, song }) => {
                             generateTrack();
                         }}
                     > Envoyer </button>
-                    : <NavLink exact to='/result'><button type="button"> Résultats </button></NavLink>
+                    : <NavLink exact to='/result'><button className="send" type="button"> Résultats </button></NavLink>
                 }
             </div>
+
+            </div>
+       
         </div>
     );
 }
