@@ -78,13 +78,20 @@ const Game = ({ generateTrack, song, index }) => {
             <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chansons<br/>
             <b>Appuyez sur play </b>pour lancer la chanson à chaque tour</p>
             <hr className="ligne"></hr>
-            <span className="timer">{isStart ? <Timer timer={timer} setTimer={setTimer} /> : <h4>30 s</h4>}</span>
-            <div className="flex">
             
+            <div className="flex">
+            <span className="timer">{isStart ? <Timer timer={timer} setTimer={setTimer} /> : <h4>30 s</h4>}</span>
             <button className="play-game" type="button" onClick={()=>{
                 rs.speak(song.lyric, "UK English Male", {rate: 0.9})
                 setIsStart(true)
             }}>Play</button>
+
+
+      <button className="play-game" onClick={() => rs.cancel(song.lyric)} type="button" value="Stop">
+        Stop
+      </button>
+
+
 
             </div>
            

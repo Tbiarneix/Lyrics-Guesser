@@ -47,13 +47,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Header />
         <Routes>
           <Route exact path='/' element={<Home generateTrack={generateTrack} song={song} index={index} />} />
           <Route path='/game' element={<Game generateTrack={generateTrack} song={song} index={index} />} />
           <Route path='/result' element={<Result />} />
         </Routes>
-      <Footer />
       </header>
     </div>
   );
