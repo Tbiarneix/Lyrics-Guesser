@@ -63,6 +63,8 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
     const [songAnswerValue, setSongAnswerValue] = useState("");
     const handleSongAnswer = (answer) => setSongAnswerValue(answer.target.value);
 
+    // const [emptyCase, setEmptyCase] = useState();
+
     useEffect(() => {
       if (timer === 0) {
         setNumberTrackPlay((n) => n + 1);
@@ -134,25 +136,6 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                 }
             </div>
         </div>
-        <div>
-        {numberTrackPlay < 10 ? (
-          <button
-            className="send"
-            type="button"
-            onClick={() => {
-              setNumberTrackPlay(numberTrackPlay + 1);
-              setIsStart(false);
-              generateTrack();
-            }}
-          >
-            Envoyer
-          </button>
-        ) : (
-          <NavLink exact to="/result">
-            <button type="button" className="send">Résultats</button>
-          </NavLink>
-        )}
-      </div>
       <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
     </div>
   );
