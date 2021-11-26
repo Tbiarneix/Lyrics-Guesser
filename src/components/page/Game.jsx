@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../style/Game.css";
 import "../style/Home.css";
@@ -57,10 +57,19 @@ const Game = ({ generateTrack, song, index }) => {
 
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
+    const [timer, setTimer] = useState(30);
     const [artistAnswerValue, setArtistAnswerValue] = useState("");
     const handleArtistAnswer = (answer) => setArtistAnswerValue(answer.target.value);
     const [songAnswerValue, setSongAnswerValue] = useState("");
     const handleSongAnswer = (answer) => setSongAnswerValue(answer.target.value);
+
+    useEffect(() => {
+      if (timer === 0) {
+        setNumberTrackPlay((n) => n + 1);
+        setTimer(30);
+        setIsStart(false);
+      }
+    }, [timer]);
 
     return (
         <div>
@@ -69,9 +78,9 @@ const Game = ({ generateTrack, song, index }) => {
             <p className="paragraphe">Vous devez trouver l'artiste et le titre de 10 chansons<br/>
             <b>Appuyez sur play </b>pour lancer la chanson à chaque tour</p>
             <hr className="ligne"></hr>
-            <span className="timer">{isStart ? <Timer /> : <h4>30 s</h4>}</span>
-            <div className="flex">
             
+            <div className="flex">
+            <span className="timer">{isStart ? <Timer timer={timer} setTimer={setTimer} /> : <h4>30 s</h4>}</span>
             <button className="play-game" type="button" onClick={()=>{
                 rs.speak(song.lyric, "UK English Male", {rate: 0.9})
                 setIsStart(true)
@@ -118,13 +127,13 @@ const Game = ({ generateTrack, song, index }) => {
                             setNumberTrackPlay(numberTrackPlay + 1);
                             setIsStart(false);
                             generateTrack();
+                            setTimer(30);
                         }}
                     > Envoyer </button>
                     : <NavLink exact to='/result'><button className="send" type="button"> Résultats </button></NavLink>
                 }
             </div>
         </div>
-   
       <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
     </div>
   );

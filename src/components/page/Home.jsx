@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import "../style/Home.css";
+import Header from '../Header';
 
 const Home = ({ generateTrack, song, index }) => {
   
   return (
     <div>
+      <Header />
       <div className="container">
       <h1 className="title1">Comment jouer ? </h1>
       <p>
