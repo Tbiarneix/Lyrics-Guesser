@@ -12,7 +12,8 @@ import './App.css';
 
 function App() {
 
-  const index = useRef(0);
+  // const index = useRef(0);
+  const [index, setIndex] = useState(0);
   const [artist, setArtist] = useState(null);
   const [track, setTrack] = useState(null);
   const [lyric, setLyric] = useState(null);
@@ -23,14 +24,14 @@ function App() {
 
   const tracks = Tracks;
 
-  useEffect(() => {
-    index.current = index.current + 1
-  }, [])
+  // useEffect(() => {
+  //   index.current = index.current + 1
+  // }, [])
 
 
   const generateTrack = () => {
 
-    // setIndex(index);
+    setIndex(index);
 
     console.log(index);
     setArtist(tracks[index].singer);
