@@ -23,10 +23,14 @@ body {
     margin-top: 2em;
 }
 .container p{
-    line-height: 2em;
+    line-height: 1.3em;
     font-size: 1.3em;
 }
 
+.num {
+    font-size:30px;
+    font-weight: bolder;
+}
 .violet {
     color : #7F00E0
 }
@@ -51,7 +55,6 @@ body {
     border-radius: 30px;
     background-color: inherit;
     padding: 20px;
-    
     width: 300px;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -74,3 +77,56 @@ body {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+.send {
+    border-radius: 30px;
+    background-color: inherit;
+    padding: 20px;
+    width: 300px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: #51EDB4;
+    color: #7F00E0;
+}
+
+.send:hover {
+    background-color: #7F00E0;
+    color: #51EDB4;
+    border: 1px solid  ;
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+input{
+    display: block;
+    
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .send {
+        width: 230px;
+    }
+    .hr {
+        display: none;
+    }
+
+}
+
+
+
+

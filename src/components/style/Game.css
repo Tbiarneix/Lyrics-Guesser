@@ -1,0 +1,118 @@
+.timer {
+    border-radius: 40px;
+    background-color: #51EDB4;
+    color: #7F00E0;
+    display: block;
+    width: 111px;
+    margin: 0 auto;
+    font-size: 38px;
+    margin: 10px;
+}
+
+.send {
+    margin-top: 0em;
+}
+
+h4 {
+    margin: 0;
+}
+
+.play-game {
+    
+    border-radius: 30px;
+    background-color: inherit;
+    padding: 20px;
+    width: 240px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: #7F00E0;
+    border: 1px solid #51EDB4 ;
+    color: #51EDB4;
+
+}
+
+.gif {
+    border-radius: 30px;
+    height: 300px;
+    margin-top: 1em;
+
+}
+
+.ligne {
+    width: 400px;
+    border: 1px solid #51EDB4;
+    margin-bottom: 3em;
+}
+
+.input {
+    border-radius: 30px;
+    background-color: inherit;
+    padding: 20px;
+    width: 300px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: #51EDB4;
+    color: #7F00E0;
+    margin-top: 1em;
+}
+
+.flex {
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .gif {
+        max-width: 100%;
+        height: auto;
+    }
+    .flex {
+        display: block;
+    }
+
+    .input {
+        margin: 0 auto;
+       
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .play-game {
+        width: 250px;
+    }
+
+    .gif {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ligne {
+        display: none;
+    }
+
+    .flex {
+        display: block;
+    }
+
+    .input {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+}
