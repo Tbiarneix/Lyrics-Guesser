@@ -92,33 +92,27 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
       <button className="play-game" onClick={() => rs.cancel(song.lyric)} type="button" value="Stop">
         Stop
       </button>
-
-
-
             </div>
-           
-            <div className="flex">
-                
-            <img className="gif" src="/assets/voice-wave.gif" alt="musique" width="400"/>
-            <div >
+                <div className="flex">
+                    <img className="gif" src="/assets/voice-wave.gif" alt="musique" width="400"/>
+                <div >
                 <p>Artiste</p>
-              <input
-              className="input"
-              value={artistAnswerValue}
-              type="text"
-              placeholder="L'artiste ici.."
-              onChange={handleArtistAnswer}>
-            </input>
-            <p>Titre</p>
-            <input
-              className="input"
-              value={songAnswerValue}
-              type="text"
-              placeholder="La chanson ici..."
-              onChange={handleSongAnswer}>
-            </input>
-           </div>
-          
+                    <input
+                        className="input"
+                        value={artistAnswerValue}
+                        type="text"
+                        placeholder="L'artiste ici.."
+                        onChange={handleArtistAnswer}>
+                    </input>
+                    <p>Titre</p>
+                    <input
+                        className="input"
+                        value={songAnswerValue}
+                        type="text"
+                        placeholder="La chanson ici..."
+                        onChange={handleSongAnswer}>
+                    </input>
+                </div>
             </div>
             <div>
                 {numberTrackPlay < 10
@@ -130,6 +124,8 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                             setIsStart(false);
                             generateTrack();
                             setTimer(30);
+                            setSongAnswerValue("");
+                            setArtistAnswerValue("");
                         }}
                     > Envoyer </button>
                     : <NavLink exact to='/result'><button className="send" type="button"> Résultats </button></NavLink>
