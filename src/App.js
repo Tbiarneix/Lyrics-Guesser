@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import TestVocal from './components/TestVocal';
 import Home from './components/page/Home';
 import Game from './components/page/Game';
@@ -9,11 +9,10 @@ import Footer from './components/Footer';
 import Tracks from './components/data/Tracks';
 
 import './App.css';
-import Header from './components/Header';
 
 function App() {
 
-  const [index, setIndex] = useState(0);
+  const index = useRef(0);
   const [artist, setArtist] = useState(null);
   const [track, setTrack] = useState(null);
   const [lyric, setLyric] = useState(null);
@@ -22,10 +21,13 @@ function App() {
 
   const tracks = Tracks;
 
+  useEffect(() => {
+    index.current = index.current + 1
+  }, [])
+
   const generateTrack = () => {
 
-    setIndex(Math.floor(Math.random() * (3 - 0) + 0));
-    // setIndex(index+1);
+    // setIndex(index);
 
     console.log(index);
     setArtist(tracks[index].singer);
