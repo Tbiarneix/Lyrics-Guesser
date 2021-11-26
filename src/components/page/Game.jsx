@@ -65,9 +65,13 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
 
     useEffect(() => {
       if (timer === 0) {
-        setNumberTrackPlay((n) => n + 1);
-        setTimer(30);
+        rs.cancel(song.lyric);
+        setNumberTrackPlay(numberTrackPlay + 1);
         setIsStart(false);
+        generateTrack();
+        setTimer(30);
+        setSongAnswerValue("");
+        setArtistAnswerValue("");
       }
     }, [timer]);
 
@@ -99,6 +103,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                         className="input"
                         value={artistAnswerValue}
                         type="text"
+                        maxlength="50"
                         placeholder="L'artiste ici.."
                         onChange={handleArtistAnswer}>
                     </input>
@@ -107,6 +112,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                         className="input"
                         value={songAnswerValue}
                         type="text"
+                        maxlength="50"
                         placeholder="La chanson ici..."
                         onChange={handleSongAnswer}>
                     </input>
@@ -118,6 +124,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                         className="send"
                         type="button"
                         onClick={() => {
+                            rs.cancel(song.lyric)
                             setNumberTrackPlay(numberTrackPlay + 1);
                             setIsStart(false);
                             generateTrack();
