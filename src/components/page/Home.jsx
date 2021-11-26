@@ -1,9 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import "../style/Home.css";
 
-const Home = ({ generateTrack }) => {
-  const rs = global.responsiveVoice;
-    
+const Home = ({ generateTrack, song, index }) => {
+  
   return (
     <div>
       <div className="container">

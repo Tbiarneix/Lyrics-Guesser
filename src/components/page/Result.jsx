@@ -27,7 +27,7 @@ const Result = ({ score }) => {
             {/* bouton = link to 'Game.jsx' */}
             <NavLink  exact to='/game'><button className="send" type="button">Rejouer</button></NavLink>
             </div>
-            
+
         </div>
     );
 }
