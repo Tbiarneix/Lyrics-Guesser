@@ -5,7 +5,7 @@ import "../style/Home.css";
 import Timer from "../Timer";
 import ScoreCounting from "../ScoreCounting";
 
-const Game = ({ generateTrack, song, index }) => {
+const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
     // const [tracks, setTracks] = useState([]);
     // const [track, setTrack] = useState(null);
     // const [lyrics, setLyrics] = useState([]);
@@ -136,7 +136,7 @@ const Game = ({ generateTrack, song, index }) => {
           </NavLink>
         )}
       </div>
-      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
+      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
     </div>
   );
 };
