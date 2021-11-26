@@ -32,7 +32,7 @@ function App() {
 
     // setIndex(index);
 
-    console.log(index);
+    console.log(index.current);
     setArtist(tracks[index].singer);
     setTrack(tracks[index].track);
     setLyric(tracks[index].lyric);
