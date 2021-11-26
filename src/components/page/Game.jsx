@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import "../style/Game.css";
 import "../style/Home.css";
 import Timer from "../Timer";
-import ScoreCounting from "../scoreCounting";
+import ScoreCounting from "../ScoreCounting";
 
-const Game = ({ generateTrack, song, index }) => {
+const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
     // const [tracks, setTracks] = useState([]);
     // const [track, setTrack] = useState(null);
     // const [lyrics, setLyrics] = useState([]);
@@ -53,7 +53,7 @@ const Game = ({ generateTrack, song, index }) => {
     // }
     //     , [track])
   
-    const rs = global.responsiveVoice;
+    let rs = global.responsiveVoice;
 
     const [numberTrackPlay, setNumberTrackPlay] = useState(1);
     const [isStart, setIsStart] = useState(false);
@@ -62,6 +62,8 @@ const Game = ({ generateTrack, song, index }) => {
     const handleArtistAnswer = (answer) => setArtistAnswerValue(answer.target.value);
     const [songAnswerValue, setSongAnswerValue] = useState("");
     const handleSongAnswer = (answer) => setSongAnswerValue(answer.target.value);
+
+    // const [emptyCase, setEmptyCase] = useState();
 
     useEffect(() => {
       if (timer === 0) {
@@ -130,7 +132,9 @@ const Game = ({ generateTrack, song, index }) => {
                 }
             </div>
         </div>
-      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} />
+
+      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
+
     </div>
   );
 };
