@@ -32,7 +32,7 @@ const Result = ({ totalScore }) => {
             <div className="container">
             <h1>Votre score est de {totalScore} !</h1>
             <h2>{congratulation}</h2>
-            <div><img src={scoreImage} alt='scoreImage' /></div>
+            <div><img className='gif' src={scoreImage} alt='scoreImage' /></div>
             <NavLink exact to='/game'><button className="play" type="button" >Rejouer</button></NavLink>
             </div>
         </div>
