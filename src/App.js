@@ -1,12 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
 import Home from './components/page/Home';
 import Game from './components/page/Game';
 import Result from './components/page/Result';
-
 import Tracks from './components/data/Tracks';
-
 import './App.css';
 
 function App() {

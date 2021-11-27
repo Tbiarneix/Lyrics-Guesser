@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Footer from "../Footer";
 import "../style/Game.css";
 import "../style/Home.css";
 import Timer from "../Timer";
@@ -140,7 +141,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore, roundS
         </div>
 
       <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} roundScore={roundScore} handleRoundScore={handleRoundScore} />
-
+    <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import "../style/Home.css";
 import Header from '../Header';
+import Footer from '../Footer';
 
 const Home = ({ generateTrack, song, index }) => {
   let rs = global.responsiveVoice;
@@ -29,10 +30,8 @@ const Home = ({ generateTrack, song, index }) => {
         rs.enableWindowClickHook(); }} 
         className="send" type="button" onClick ={generateTrack}
       >Jouer</button></ NavLink>
-      
-   
-       
       </div>
+      <Footer />
     </div>
   );
 };

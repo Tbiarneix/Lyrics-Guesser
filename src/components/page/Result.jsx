@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Header from '../Header';
+import Footer from '../Footer';
 import '../style/Result.css';
 import '../style/Home.css';
 
@@ -35,6 +36,7 @@ const Result = ({ totalScore }) => {
             <div><img className='gif' src={scoreImage} alt='scoreImage' /></div>
             <NavLink exact to='/game'><button className="play" type="button" >Rejouer</button></NavLink>
             </div>
+            <Footer />
         </div>
     );
 }
