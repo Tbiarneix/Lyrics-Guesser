@@ -15,17 +15,17 @@ body {
 
 .footer {
   width: 100%;
-  margin: 1rem 0 auto;
-  background: linear-gradient(70deg,#7501ce, #4e009c);
-  position: absolute;
-  bottom: 0;
+  margin: 3rem auto 0;
+  padding: 3rem auto 0;
   font-family: 'Baloo 2', cursive;
   color: rgba(182, 182, 182, 0.548);
 };
 
 .footer-text {
-  margin: 1rem 0 auto;
-  padding: 3rem 0.5rem auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .footer-text a {
