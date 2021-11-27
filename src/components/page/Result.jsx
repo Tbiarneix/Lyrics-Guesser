@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Header from '../Header';
 import '../style/Result.css';
 import '../style/Home.css';
 
@@ -21,6 +22,7 @@ const Result = ({ totalScore }) => {
 
     return (
         <div>
+            <Header />
             <div className="container">
             <h1>Votre score est de {totalScore} !</h1>
             <h2>{congratulation}</h2>

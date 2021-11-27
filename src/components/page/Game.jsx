@@ -5,7 +5,7 @@ import "../style/Home.css";
 import Timer from "../Timer";
 import ScoreCounting from "../ScoreCounting";
 
-const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
+const Game = ({ generateTrack, song, index, totalScore, handleTotalScore, roundScore, handleRoundScore }) => {
     // const [tracks, setTracks] = useState([]);
     // const [track, setTrack] = useState(null);
     // const [lyrics, setLyrics] = useState([]);
@@ -124,6 +124,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
                         className="send"
                         type="button"
                         onClick={() => {
+                            handleTotalScore();
                             rs.cancel(song.lyric)
                             setNumberTrackPlay(numberTrackPlay + 1);
                             setIsStart(false);
@@ -138,7 +139,7 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore }) => {
             </div>
         </div>
 
-      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} />
+      <ScoreCounting trackName={song.track} artistName={song.singer} artistAnswerValue={artistAnswerValue} songAnswerValue={songAnswerValue} totalScore={totalScore} handleTotalScore={handleTotalScore} roundScore={roundScore} handleRoundScore={handleRoundScore} />
 
     </div>
   );
