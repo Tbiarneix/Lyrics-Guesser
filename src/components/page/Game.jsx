@@ -135,7 +135,20 @@ const Game = ({ generateTrack, song, index, totalScore, handleTotalScore, roundS
                             setArtistAnswerValue("");
                         }}
                     > Envoyer </button>
-                    : <NavLink exact to='/result'><button className="send" type="button"> Résultats </button></NavLink>
+                    : <NavLink exact to='/result'>
+                        <button 
+                            className="send"
+                            type="button"
+                            onClick={() => {
+                                handleTotalScore();
+                                rs.cancel(song.lyric)
+                                setIsStart(false);
+                                setTimer(30);
+                                setSongAnswerValue("");
+                                setArtistAnswerValue("");
+                            }}
+                        > Résultats </button>
+                    </NavLink>
                 }
             </div>
         </div>
