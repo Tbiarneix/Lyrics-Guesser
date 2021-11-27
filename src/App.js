@@ -1,12 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
 import Home from './components/page/Home';
 import Game from './components/page/Game';
 import Result from './components/page/Result';
-
 import Tracks from './components/data/Tracks';
-
 import './App.css';
 
 function App() {
@@ -19,9 +16,19 @@ function App() {
   const [song, setSong] = useState({});
 
   const tracks = Tracks;
+
+  const [roundScore, setRoundScore] = useState(0);
+  const handleRoundScore = (roundScore) => {
+    setRoundScore(roundScore);
+  }
   
   const [totalScore, setTotalScore] = useState(0);
-
+  const handleTotalScore = () => {
+    setTotalScore(totalScore + roundScore);
+  }
+  useEffect(() => {
+    handleTotalScore()
+  }, [])
 
   // useEffect(() => {
   //   index.current = index.current + 1
@@ -29,16 +36,11 @@ function App() {
 
 
   const generateTrack = () => {
-    // setIndex(Math.floor(Math.random() * (10 - 0) + 0));
     setIndex(Math.floor(Math.random() * (11 - 0) + 0));
     console.log(index);
     setArtist(tracks[index].singer);
     setTrack(tracks[index].track);
     setLyric(tracks[index].lyric);
-  }
-
-  const handleTotalScore = (roundScore) => {
-    setTotalScore(roundScore)
   }
 
   useEffect(() => {
@@ -57,7 +59,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route exact path='/' element={<Home generateTrack={generateTrack} song={song} index={index}/>} />
-          <Route path='/game' element={<Game generateTrack={generateTrack} song={song} index={index} totalScore={totalScore} handleTotalScore={handleTotalScore} />} />
+          <Route path='/game' element={<Game generateTrack={generateTrack} song={song} index={index} totalScore={totalScore} handleTotalScore={handleTotalScore} roundScore={roundScore} handleRoundScore={handleRoundScore}/>} />
           <Route path='/result' element={<Result totalScore={totalScore} />} />
         </Routes>
       </header>

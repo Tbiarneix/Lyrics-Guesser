@@ -16,11 +16,10 @@ body {
 
 .container {
     width: 60%;
-    margin: 0 auto;
+    margin: 2em auto 0;
     border: 1px solid #51EDB4 ;
     border-radius: 30px;
     font-family: 'Baloo 2', cursive;
-    margin-top: 2em;
 }
 .container p{
     line-height: 1.3em;
