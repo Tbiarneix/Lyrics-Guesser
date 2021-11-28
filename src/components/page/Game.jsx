@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import axios from 'axios';
 import Footer from "../Footer";
 import "../style/Game.css";
 import "../style/Home.css";
@@ -7,62 +8,57 @@ import Timer from "../Timer";
 import ScoreCounting from "../ScoreCounting";
 
 const Game = ({
-  generateTrack,
-  song,
-  index,
   totalScore,
   handleTotalScore,
   roundScore,
   handleRoundScore,
 }) => {
-  // const [tracks, setTracks] = useState([]);
-  // const [track, setTrack] = useState(null);
-  // const [lyrics, setLyrics] = useState([]);
-  // const [index, setIndex] = useState(null);
-  // const [trackName, setTrackName] = useState(null);
-  // const [trackID, setTrackID] = useState(null);
-  // const [artistName, setArtistName] = useState(null);
+  const [tracks, setTracks] = useState([]);
+  const [track, setTrack] = useState(null);
+  const [lyrics, setLyrics] = useState([]);
+  const [index, setIndex] = useState(null);
+  const [trackName, setTrackName] = useState("");
+  const [trackID, setTrackID] = useState(null);
+  const [artistName, setArtistName] = useState("");
 
-  // useEffect(() => {
-  //     setIndex(Math.floor(Math.random() * (31 - 0) + 0));
-  // }, []);
+  useEffect(() => {
+      setIndex(Math.floor(Math.random() * (31 - 0) + 0));
+  }, []);
 
-  // useEffect(() => {
-  //     axios
-  //         .get('https://magical-it-works.jsrover.wilders.dev/https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=128b7ceff7bed320824b72e696827c98&chart_name=top&page=1&page_size=30&country=fr&f_has_lyrics=1')
-  //         .then((res) => res.data)
-  //         .then((data) => data.message.body.track_list)
-  //         .then((tracklist) => setTracks(tracklist))
-  //         .catch((err) => console.log(err))
-  // }, []);
+  useEffect(() => {
+      axios
+          .get('https://magical-it-works.jsrover.wilders.dev/https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=fc20ad9d7f098141263c13811936d876&chart_name=top&page=1&page_size=50&country=fr&f_has_lyrics=1')
+          .then((res) => res.data)
+          .then((data) => data.message.body.track_list)
+          .then((tracklist) => setTracks(tracklist))
+          .catch((err) => console.log(err))
+  }, []);
 
-  // useEffect(() => {
-  //     if (tracks.length) {
-  //         setTrackName(tracks[index].track.track_name);
-  //         setTrackID(tracks[index].track.track_id);
-  //         setArtistName(tracks[index].track.artist_name);
+  useEffect(() => {
+      if (tracks.length) {
+          setTrackName(tracks[index].track.track_name);
+          setTrackID(tracks[index].track.track_id);
+          setArtistName(tracks[index].track.artist_name);
+          setTrack({
+              title: trackName,
+              id: trackID,
+              artist: artistName
+          });
+      }
+  }, [tracks]);
 
-  //         setTrack({
-  //             title: trackName,
-  //             id: trackID,
-  //             artist: artistName
-  //         });
-  //     }
-  // }, [tracks]);
-
-  // useEffect(() => {
-  //     if (track) {
-  //         axios
-  //             .get(`https://magical-it-works.jsrover.wilders.dev/https://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=128b7ceff7bed320824b72e696827c98&track_id=${track.id}`)
-  //             .then((res) => res.data)
-  //             .then((data) => data.message.body.lyrics)
-  //             .then((lyricsArray) => setLyrics(lyricsArray.lyrics_body))
-  //     }
-  // }
-  //     , [track])
-
+  useEffect(() => {
+      if (track) {
+          axios
+              .get(`https://magical-it-works.jsrover.wilders.dev/https://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=fc20ad9d7f098141263c13811936d876&track_id=${track.id}`)
+              .then((res) => res.data)
+              .then((data) => data.message.body.lyrics)
+              .then((lyricsArray) => setLyrics(lyricsArray.lyrics_body))
+      }
+  }
+      , [track])
+  console.log(lyrics);
   let rs = global.responsiveVoice;
-
   const [numberTrackPlay, setNumberTrackPlay] = useState(1);
   const [isStart, setIsStart] = useState(false);
   const [timer, setTimer] = useState(30);
@@ -74,10 +70,9 @@ const Game = ({
 
   useEffect(() => {
     if (timer === 0) {
-      rs.cancel(song.lyric);
+      rs.cancel(lyrics);
       setNumberTrackPlay(numberTrackPlay + 1);
       setIsStart(false);
-      generateTrack();
       setTimer(30);
       setSongAnswerValue("");
       setArtistAnswerValue("");
@@ -107,7 +102,7 @@ const Game = ({
             className="play-game"
             type="button"
             onClick={() => {
-              rs.speak(song.lyric, "UK English Male", { rate: 0.9 });
+              rs.speak(lyrics, "UK English Male", { rate: 0.9 });
               setIsStart(true);
             }}
           >
@@ -115,7 +110,7 @@ const Game = ({
           </button>
           <button
             className="play-game"
-            onClick={() => rs.cancel(song.lyric)}
+            onClick={() => rs.cancel(lyrics)}
             type="button"
             value="Stop"
           >
@@ -157,10 +152,9 @@ const Game = ({
               type="button"
               onClick={() => {
                 handleTotalScore();
-                rs.cancel(song.lyric);
+                rs.cancel(lyrics);
                 setNumberTrackPlay(numberTrackPlay + 1);
                 setIsStart(false);
-                generateTrack();
                 setTimer(30);
                 setSongAnswerValue("");
                 setArtistAnswerValue("");
@@ -176,7 +170,7 @@ const Game = ({
                 type="button"
                 onClick={() => {
                   handleTotalScore();
-                  rs.cancel(song.lyric);
+                  rs.cancel(lyrics);
                   setIsStart(false);
                   setTimer(30);
                   setSongAnswerValue("");
@@ -191,8 +185,8 @@ const Game = ({
         </div>
       </div>
       <ScoreCounting
-        trackName={song.track}
-        artistName={song.singer}
+        trackName={trackName}
+        artistName={artistName}
         artistAnswerValue={artistAnswerValue}
         songAnswerValue={songAnswerValue}
         totalScore={totalScore}
