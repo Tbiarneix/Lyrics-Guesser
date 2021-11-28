@@ -53,106 +53,106 @@ const Tracks = [
         track: "Fallin'",
         lyric: "I keep on falling in and outta love with you, Sometimes I love ya, sometimes you make me blue, Sometimes I feel good, at times I feel used, Loving you, darling, makes me so confused, I keep on falling in and out, Of love with you, I never loved someone, The way that I love you, Oh, oh, I never felt this way, How do you give me so much pleasure, And cause me so much pain? (Yeah, yeah), Just when I think I've taken more than would a fool, I start falling back in love with you, I keep on falling in and out, Of love with you, I never loved someone (Someone), The way that I love you (Way I)"
     },
-    {
-        singer: "Bob Marley",
-        track: "I shot the Sheriff",
-        lyric: "I shot the sheriff, but I did not shoot the deputy I shot the sheriff, but I did not shoot the deputy All around in my home town They're trying to track me down They say they want to bring me in guilty For the killing of a deputy For the life of a deputy, but I say I shot the sheriff, but I swear it was in self-defense I shot the sheriff, and they say it is a capital offense"
-    },
-    {
-        singer: "Deep Purple",
-        track: "Smoke on the Water",
-        lyric: "We all came out to Montreux On the Lake Geneva shoreline To make records with a mobile We didn't have much time Frank Zappa and the Mothers Were at the best place around But some stupid with a flare gun Burned the place to the ground Smoke on the water A fire in the sky Smoke on the water"
-    },
-    {
-        singer: "The Beatles",
-        track: "Let it be",
-        lyric: "When I find myself in times of trouble, Mother Mary comes to me Speaking words of wisdom, let it be And in my hour of darkness she is standing right in front of me Speaking words of wisdom, let it be Let it be, let it be, let it be, let it be Whisper words of wisdom, let it be And when the broken hearted people living in the world agree There will be an answer, let it be For though they may be parted, there is still a chance that they will see There will be an answer, let it be"
-    },
-    {
-        singer: "Pink Floyd",
-        track: "Another Brick In The Wall",
-        lyric: "We don't need no education We don't need no thought control No dark sarcasm in the classroom Teachers leave them kids alone Hey! Teacher, leave them kids alone! All in all it's just another brick in the wall All in all you're just another brick in the wall We don't need no education We don't need no thought control No dark sarcasm in the classroom  Teachers leave them kids alone Hey! Teacher, leave us kids alone! All in all you're just another brick in the wall All in all you're just another brick in the wall "
-    },
-    {
-        singer: "The Police",
-        track: "Roxane",
-        lyric: "Roxanne You don't have to put on the red light Those days are over You don't have to sell your body to the night Roxanne You don't have to wear that dress tonight Walk the streets for money You don't care if it's wrong or if it's right Roxanne You don't have to put on the red light Roxanne You don't have to put on the red light Roxanne Put on the red light Roxanne Put on the red light Roxanne Put on the red light Roxanne Put on the red light Roxanne Put on the red light I loved you since I knew you"
-    },
-    {
-        singer: "ABBA",
-        track: "Gimme! Gimme! Gimme!",
-        lyric: "Half past twelve And I'm watching the late show in my flat all alone How I hate to spend the evening on my own Autumn winds Blowing outside my window as I look around the room And it makes me so depressed to see the gloom There's not a soul out there No one to hear my prayer Gimme, gimme, gimme a man after midnight Won't somebody help me chase the shadows away Gimme, gimme, gimme a man after midnight Take me through the darkness to the break of the day"
-    },
-    {
-        singer: "Depeche Mode",
-        track: "Enjoy the silence",
-        lyric: "Words like violence Break the silence Come crashing in Into my little world Painful to me Pierce right through me Can't you understand? Oh, my little girl All I ever wanted All I ever needed Is here in my arms Words are very unnecessary They can only do harm Vows are spoken To be broken Feelings are intense Words are trivial Pleasures remain So does the pain Words are meaningless And forgettable All I ever wanted All I ever needed Is here in my arms Words are very unnecessary They can only do harm "
-    },
-    {
-        singer: "Phil Collins",
-        track: "Another day in paradise",
-        lyric: "She calls out to the man on the street Sir, can you help me? It's cold and I've nowhere to sleep Is there somewhere you can tell me? He walks on, doesn't look back He pretends he can't hear her Starts to whistle as he crosses the street Seems embarrassed to be there Oh, think twice, 'cause it's another day for you and me in paradise Oh, think twice, 'cause it's another day for you You and me in paradise Think about it"
-    },
-    {
-        singer: "MC HAMMER",
-        track: "U Can't Touch This",
-        lyric: "You can't touch this You can't touch this You can't touch this You can't touch this My, my, my, my You can't touch this Music hits me so hard Makes me say Oh, my Lord Thank you for blessing me With a mind to rhyme and two hyped feet It feels good when you know you're down A super dope homeboy from the Oaktown And I'm known as such And this is a beat, uh, you can't touch I told you, homeboy You can't touch this Yeah, that's how we livin', and ya know You can't touch this"
-    },
-    {
-        singer: "Shaggy",
-        track: "Hey sexy lady",
-        lyric: "Hey sexy lady, I like your flow Your body's burnin', I lost control Your booty on me, ceiling to floor Only you can make me scream and beg for more Everybody's callin', ballin', hot me crawlin' up the wallin' and- My size ain't small, less tall and catch a glimpse of clothes be fallin' Her neighbor's callin', ballin', all this noise is so appallin' They must believe we're brawlin', head boards bang 'til early this mornin' Hey sexy lady, I like your flow Your body's burnin', I lost control Your booty on me, ceiling to floor Only you can make me scream and beg for more"
-    },
-    {
-        singer: "Justin Timberlake",
-        track: "Cry me a river",
-        lyric: "You were my sun, you were my earth But you didn't know all the ways I loved you, no So you took a chance, made other plans But I bet you didn't think that they would come crashing down, no You don't have to say, what you did I already know, I found out from him Now there's just no chance With you and me There'll never be Don't it make you sad about it? You told me you love me Why did you leave me all alone Now you tell me you need me When you call me on the phone Girl, I refuse You must have me confused with some other guy The bridges were burned Now it's your turn, to cry Cry me a river Cry me a river Cry me a river Cry me a river"
-    },
-    {
-        singer: "Rihanna",
-        track: "Rude Boy",
-        lyric: "Come here rude boy, boy Can you get it up? Come here rude boy, boy Is you big enough? Take it, take it yeah Baby, baby yeah Take it, take it yeah Love me yeah love me Come here rude boy, boy Can you get it up? Come here rude boy, boy Is you big enough? Take it, take it yeah Baby, baby yeah Take it, take it yeah Love me yeah love me Tonight, I'ma let you be the captain Tonight, I'ma let you do your thing, yeah Tonight, I'ma let you be a rider Giddy up, giddy up, giddy up, babe"
-    },
-    {
-        singer: "Madcon",
-        track: "Beggin",
-        lyric: "Oh Put your loving hand out, baby I'm beggin' Beggin', beggin' you Put your loving hand out, baby Beggin', beggin' you Put your loving hand out, darling Riding high, when I was king Played it hard and fast, 'cause I had everything Walked away, wonderin' then But easy come and easy go And it would end So why every time I lead you let me go? Every time I reach, you get me low Every time I seek, you let me know But I planted that seed, just let me grow I'm on my knees while I'm beggin' 'Cause I don't want to lose you I got my arms all spread I hope that my heart gets fed Matter of fact, girl, I'm beggin' beggin', beggin'"
-    },
-    {
-        singer: "Katy Perry",
-        track: "I Kissed a girl",
-        lyric: "This was never the way I planned Not my intention I got so brave, drink in hand Lost my discretion It's not what I'm used to Just wanna try you on I'm curious for you Caught my attention I kissed a girl and I liked it The taste of her cherry chap stick I kissed a girl just to try it I hope my boyfriend don't mind it It felt so wrong It felt so right Don't mean I'm in love tonight I kissed a girl and I liked it I liked it"
-    },
-    {
-        singer: "M.I.A.",
-        track: "Paper Plane",
-        lyric: "I fly like paper, get high like planes If you catch me at the border I got visas in my name If you come around here, I make 'em all day I get one done in a second if you wait I fly like paper, get high like planes If you catch me at the border I got visas in my name If you come around here, I make 'em all day I get one done in a second if you wait Sometimes I think sitting on trains Every stop I get to I'm clocking that game Everyone's a winner, we're making our fame Bona fide hustler making my name Sometimes I think sitting on trains Every stop I get to I'm clocking that game Everyone's a winner, we're making our fame Bona fide hustler making my name"
-    },
-    {
-        singer: "Pony pony run run",
-        track: "Hey you",
-        lyric: "I take my time today It's not an easy game Many sights to be seen if you say so It's no too easy, baby Crossing lines Don't let me feel this way Rage in my eyes So, so say Take my time Let me find a way To take my time today Wish i was Young enough Wish you were Made just for me Wish i was Young enough I wish you were Made just Hey you No you don't have to go Oh-oh No you don't have to do so Hey you No you don't have to go Oh-oh No you don't have to do so Hey you No you don't have to go Oh-oh No you don't have to do so Hey you No you don't have to go Oh-oh"
-    },
-    {
-        singer: "Adele",
-        track: "Skyfall",
-        lyric: "This is the end Hold your breath and count to ten Feel the Earth move and then Hear my heart burst again For this is the end I've drowned and dreamt this moment So overdue, I owe them Swept away, I'm stolen Let the sky fall When it crumbles We will stand tall Face it all together Let the sky fall When it crumbles We will stand tall Face it all together At Skyfall At Skyfall Skyfall is where we start A thousand miles and poles apart Where worlds collide and days are dark You may have my number, you can take my name But you'll never have my heart"
-    },
-    {
-        singer: "Aloe Black",
-        track: "I Need a dollar",
-        lyric: "I need a dollar, dollar a dollar is what I need Hey hey Well I need a dollar, dollar a dollar is what I need Hey hey And I said I need dollar dollar, a dollar is what I need And if I share with you my story would you share your dollar with me Bad times are coming and I reap what I don't sow Hey hey Well let me tell you something all that glitters ain't gold Hey hey It's been a long old trouble long old troublesome road And I'm looking for somebody come and help me carry this load"
-    },
-    {
-        singer: "Frero Delavega",
-        track: "Le Chant des Sirènes",
-        lyric: "Enfants des parcs, gamins des plages Le vent menace les châteaux de sable façonnés de mes doigts Le temps n'épargne personne hélas Les années passent, l'écho s'évade sur la Dune du Pyla Au gré des saisons, des photomatons Je m'abandonne à ces lueurs d'autrefois Au gré des saisons, des décisions, je m'abandonne Quand les souvenirs s'en mêlent, les larmes me viennent Et le chant des sirènes me replonge en hiver Oh mélancolie cruelle, harmonie fluette, euphorie solitaire"
-    },
-    {
-        singer: "Imagine Dragons",
-        track: "Radioactive",
-        lyric: "I'm waking up to ash and dust I wipe my brow and I sweat my rust I'm breathing in the chemicals I'm breaking in, shaping up, then checking out on the prison bus This is it, the apocalypse Whoa I'm waking up, I feel it in my bones Enough to make my systems blow Welcome to the new age, to the new age Welcome to the new age, to the new age Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive"
-    },
+    // {
+    //     singer: "Bob Marley",
+    //     track: "I shot the Sheriff",
+    //     lyric: "I shot the sheriff, but I did not shoot the deputy I shot the sheriff, but I did not shoot the deputy All around in my home town They're trying to track me down They say they want to bring me in guilty For the killing of a deputy For the life of a deputy, but I say I shot the sheriff, but I swear it was in self-defense I shot the sheriff, and they say it is a capital offense"
+    // },
+    // {
+    //     singer: "Deep Purple",
+    //     track: "Smoke on the Water",
+    //     lyric: "We all came out to Montreux On the Lake Geneva shoreline To make records with a mobile We didn't have much time Frank Zappa and the Mothers Were at the best place around But some stupid with a flare gun Burned the place to the ground Smoke on the water A fire in the sky Smoke on the water"
+    // },
+    // {
+    //     singer: "The Beatles",
+    //     track: "Let it be",
+    //     lyric: "When I find myself in times of trouble, Mother Mary comes to me Speaking words of wisdom, let it be And in my hour of darkness she is standing right in front of me Speaking words of wisdom, let it be Let it be, let it be, let it be, let it be Whisper words of wisdom, let it be And when the broken hearted people living in the world agree There will be an answer, let it be For though they may be parted, there is still a chance that they will see There will be an answer, let it be"
+    // },
+    // {
+    //     singer: "Pink Floyd",
+    //     track: "Another Brick In The Wall",
+    //     lyric: "We don't need no education We don't need no thought control No dark sarcasm in the classroom Teachers leave them kids alone Hey! Teacher, leave them kids alone! All in all it's just another brick in the wall All in all you're just another brick in the wall We don't need no education We don't need no thought control No dark sarcasm in the classroom  Teachers leave them kids alone Hey! Teacher, leave us kids alone! All in all you're just another brick in the wall All in all you're just another brick in the wall "
+    // },
+    // {
+    //     singer: "The Police",
+    //     track: "Roxane",
+    //     lyric: "Roxanne You don't have to put on the red light Those days are over You don't have to sell your body to the night Roxanne You don't have to wear that dress tonight Walk the streets for money You don't care if it's wrong or if it's right Roxanne You don't have to put on the red light Roxanne You don't have to put on the red light Roxanne Put on the red light Roxanne Put on the red light Roxanne Put on the red light Roxanne Put on the red light Roxanne Put on the red light I loved you since I knew you"
+    // },
+    // {
+    //     singer: "ABBA",
+    //     track: "Gimme! Gimme! Gimme!",
+    //     lyric: "Half past twelve And I'm watching the late show in my flat all alone How I hate to spend the evening on my own Autumn winds Blowing outside my window as I look around the room And it makes me so depressed to see the gloom There's not a soul out there No one to hear my prayer Gimme, gimme, gimme a man after midnight Won't somebody help me chase the shadows away Gimme, gimme, gimme a man after midnight Take me through the darkness to the break of the day"
+    // },
+    // {
+    //     singer: "Depeche Mode",
+    //     track: "Enjoy the silence",
+    //     lyric: "Words like violence Break the silence Come crashing in Into my little world Painful to me Pierce right through me Can't you understand? Oh, my little girl All I ever wanted All I ever needed Is here in my arms Words are very unnecessary They can only do harm Vows are spoken To be broken Feelings are intense Words are trivial Pleasures remain So does the pain Words are meaningless And forgettable All I ever wanted All I ever needed Is here in my arms Words are very unnecessary They can only do harm "
+    // },
+    // {
+    //     singer: "Phil Collins",
+    //     track: "Another day in paradise",
+    //     lyric: "She calls out to the man on the street Sir, can you help me? It's cold and I've nowhere to sleep Is there somewhere you can tell me? He walks on, doesn't look back He pretends he can't hear her Starts to whistle as he crosses the street Seems embarrassed to be there Oh, think twice, 'cause it's another day for you and me in paradise Oh, think twice, 'cause it's another day for you You and me in paradise Think about it"
+    // },
+    // {
+    //     singer: "MC HAMMER",
+    //     track: "U Can't Touch This",
+    //     lyric: "You can't touch this You can't touch this You can't touch this You can't touch this My, my, my, my You can't touch this Music hits me so hard Makes me say Oh, my Lord Thank you for blessing me With a mind to rhyme and two hyped feet It feels good when you know you're down A super dope homeboy from the Oaktown And I'm known as such And this is a beat, uh, you can't touch I told you, homeboy You can't touch this Yeah, that's how we livin', and ya know You can't touch this"
+    // },
+    // {
+    //     singer: "Shaggy",
+    //     track: "Hey sexy lady",
+    //     lyric: "Hey sexy lady, I like your flow Your body's burnin', I lost control Your booty on me, ceiling to floor Only you can make me scream and beg for more Everybody's callin', ballin', hot me crawlin' up the wallin' and- My size ain't small, less tall and catch a glimpse of clothes be fallin' Her neighbor's callin', ballin', all this noise is so appallin' They must believe we're brawlin', head boards bang 'til early this mornin' Hey sexy lady, I like your flow Your body's burnin', I lost control Your booty on me, ceiling to floor Only you can make me scream and beg for more"
+    // },
+    // {
+    //     singer: "Justin Timberlake",
+    //     track: "Cry me a river",
+    //     lyric: "You were my sun, you were my earth But you didn't know all the ways I loved you, no So you took a chance, made other plans But I bet you didn't think that they would come crashing down, no You don't have to say, what you did I already know, I found out from him Now there's just no chance With you and me There'll never be Don't it make you sad about it? You told me you love me Why did you leave me all alone Now you tell me you need me When you call me on the phone Girl, I refuse You must have me confused with some other guy The bridges were burned Now it's your turn, to cry Cry me a river Cry me a river Cry me a river Cry me a river"
+    // },
+    // {
+    //     singer: "Rihanna",
+    //     track: "Rude Boy",
+    //     lyric: "Come here rude boy, boy Can you get it up? Come here rude boy, boy Is you big enough? Take it, take it yeah Baby, baby yeah Take it, take it yeah Love me yeah love me Come here rude boy, boy Can you get it up? Come here rude boy, boy Is you big enough? Take it, take it yeah Baby, baby yeah Take it, take it yeah Love me yeah love me Tonight, I'ma let you be the captain Tonight, I'ma let you do your thing, yeah Tonight, I'ma let you be a rider Giddy up, giddy up, giddy up, babe"
+    // },
+    // {
+    //     singer: "Madcon",
+    //     track: "Beggin",
+    //     lyric: "Oh Put your loving hand out, baby I'm beggin' Beggin', beggin' you Put your loving hand out, baby Beggin', beggin' you Put your loving hand out, darling Riding high, when I was king Played it hard and fast, 'cause I had everything Walked away, wonderin' then But easy come and easy go And it would end So why every time I lead you let me go? Every time I reach, you get me low Every time I seek, you let me know But I planted that seed, just let me grow I'm on my knees while I'm beggin' 'Cause I don't want to lose you I got my arms all spread I hope that my heart gets fed Matter of fact, girl, I'm beggin' beggin', beggin'"
+    // },
+    // {
+    //     singer: "Katy Perry",
+    //     track: "I Kissed a girl",
+    //     lyric: "This was never the way I planned Not my intention I got so brave, drink in hand Lost my discretion It's not what I'm used to Just wanna try you on I'm curious for you Caught my attention I kissed a girl and I liked it The taste of her cherry chap stick I kissed a girl just to try it I hope my boyfriend don't mind it It felt so wrong It felt so right Don't mean I'm in love tonight I kissed a girl and I liked it I liked it"
+    // },
+    // {
+    //     singer: "M.I.A.",
+    //     track: "Paper Plane",
+    //     lyric: "I fly like paper, get high like planes If you catch me at the border I got visas in my name If you come around here, I make 'em all day I get one done in a second if you wait I fly like paper, get high like planes If you catch me at the border I got visas in my name If you come around here, I make 'em all day I get one done in a second if you wait Sometimes I think sitting on trains Every stop I get to I'm clocking that game Everyone's a winner, we're making our fame Bona fide hustler making my name Sometimes I think sitting on trains Every stop I get to I'm clocking that game Everyone's a winner, we're making our fame Bona fide hustler making my name"
+    // },
+    // {
+    //     singer: "Pony pony run run",
+    //     track: "Hey you",
+    //     lyric: "I take my time today It's not an easy game Many sights to be seen if you say so It's no too easy, baby Crossing lines Don't let me feel this way Rage in my eyes So, so say Take my time Let me find a way To take my time today Wish i was Young enough Wish you were Made just for me Wish i was Young enough I wish you were Made just Hey you No you don't have to go Oh-oh No you don't have to do so Hey you No you don't have to go Oh-oh No you don't have to do so Hey you No you don't have to go Oh-oh No you don't have to do so Hey you No you don't have to go Oh-oh"
+    // },
+    // {
+    //     singer: "Adele",
+    //     track: "Skyfall",
+    //     lyric: "This is the end Hold your breath and count to ten Feel the Earth move and then Hear my heart burst again For this is the end I've drowned and dreamt this moment So overdue, I owe them Swept away, I'm stolen Let the sky fall When it crumbles We will stand tall Face it all together Let the sky fall When it crumbles We will stand tall Face it all together At Skyfall At Skyfall Skyfall is where we start A thousand miles and poles apart Where worlds collide and days are dark You may have my number, you can take my name But you'll never have my heart"
+    // },
+    // {
+    //     singer: "Aloe Black",
+    //     track: "I Need a dollar",
+    //     lyric: "I need a dollar, dollar a dollar is what I need Hey hey Well I need a dollar, dollar a dollar is what I need Hey hey And I said I need dollar dollar, a dollar is what I need And if I share with you my story would you share your dollar with me Bad times are coming and I reap what I don't sow Hey hey Well let me tell you something all that glitters ain't gold Hey hey It's been a long old trouble long old troublesome road And I'm looking for somebody come and help me carry this load"
+    // },
+    // {
+    //     singer: "Frero Delavega",
+    //     track: "Le Chant des Sirènes",
+    //     lyric: "Enfants des parcs, gamins des plages Le vent menace les châteaux de sable façonnés de mes doigts Le temps n'épargne personne hélas Les années passent, l'écho s'évade sur la Dune du Pyla Au gré des saisons, des photomatons Je m'abandonne à ces lueurs d'autrefois Au gré des saisons, des décisions, je m'abandonne Quand les souvenirs s'en mêlent, les larmes me viennent Et le chant des sirènes me replonge en hiver Oh mélancolie cruelle, harmonie fluette, euphorie solitaire"
+    // },
+    // {
+    //     singer: "Imagine Dragons",
+    //     track: "Radioactive",
+    //     lyric: "I'm waking up to ash and dust I wipe my brow and I sweat my rust I'm breathing in the chemicals I'm breaking in, shaping up, then checking out on the prison bus This is it, the apocalypse Whoa I'm waking up, I feel it in my bones Enough to make my systems blow Welcome to the new age, to the new age Welcome to the new age, to the new age Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive Whoa, oh, oh, oh, oh, whoa, oh, oh, oh, I'm radioactive, radioactive"
+    // },
 ]
 
 export default Tracks;
