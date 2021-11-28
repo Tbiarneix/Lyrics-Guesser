@@ -30,13 +30,8 @@ function App() {
     handleTotalScore()
   }, [])
 
-  // useEffect(() => {
-  //   index.current = index.current + 1
-  // }, [])
-
-
   const generateTrack = () => {
-    setIndex(Math.floor(Math.random() * (11 - 0) + 0));
+    setIndex(Math.floor(Math.random() * (31 - 0) + 0));
     console.log(index);
     setArtist(tracks[index].singer);
     setTrack(tracks[index].track);
